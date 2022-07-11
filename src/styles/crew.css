@@ -1,0 +1,44 @@
+.crew {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/crew/background-crew-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+}
+
+.crew_card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.crew_card_member > h2 {
+  font-family: 'Bellefair', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: gray;
+  margin-top: 7rem;
+}
+
+.crew_card_member > h1 {
+  font-family: 'Bellefair', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.crew_card_member > p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: hsl(231, 77%, 90%);
+  letter-spacing: 0.1rem;
+  height: 10rem;
+  width: 35vw;
+  margin: 2rem 0 4rem;
+}
+
+.crew_card_photo {
+  height: 72vh;
+}

@@ -1,0 +1,49 @@
+.technology {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.technology_card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 5rem;
+}
+
+.nav_tech_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.technology_card_terminology {
+  width: 30vw;
+}
+
+.technology_card_terminology > h2 {
+  color: hsl(231, 77%, 90%);
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.technology_card_terminology > h1 {
+  font-family: "Bellefair", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.technology_card_terminology > p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+  color: hsl(231, 77%, 90%);
+  letter-spacing: 0.1rem;
+  height: 10rem;
+  margin: 2rem 0 4rem;
+}

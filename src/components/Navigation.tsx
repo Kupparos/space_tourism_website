@@ -3,7 +3,6 @@ import {
   createStyles,
   Header,
   Container,
-  Anchor,
   Group,
   Burger,
 } from "@mantine/core";
@@ -52,7 +51,11 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "space-evenly",
     background: "rgba(255,255,255,.05)",
     backdropFilter: "blur(80px)",
+    [theme.fn.smallerThan(770)]: {
+      width: "70vw",
+    paddingRight: '0',
 
+    },
     [theme.fn.smallerThan(500)]: {
       display: 'none',
     },
