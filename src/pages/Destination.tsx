@@ -67,6 +67,9 @@ const Destination: FC = () => {
       borderBottom: "3px solid transparent",
       transition: "border-color 200ms ease, color 200ms ease",
       textDecoration: "none",
+      [theme.fn.smallerThan(500)]: {
+        fontSize: '0.8rem',
+      },
 
       "&:hover": {
         textDecoration: "none",

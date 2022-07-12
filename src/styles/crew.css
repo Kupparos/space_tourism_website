@@ -1,6 +1,6 @@
 .crew {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url(../assets/crew/background-crew-desktop.jpg);
   background-position: center;
   background-size: cover;
@@ -13,22 +13,22 @@
   justify-content: space-between;
 }
 
-.crew_card_member > h2 {
-  font-family: 'Bellefair', serif;
+.member > h2 {
+  font-family: "Bellefair", serif;
   font-size: 2rem;
   font-weight: 400;
   color: gray;
   margin-top: 7rem;
 }
 
-.crew_card_member > h1 {
-  font-family: 'Bellefair', serif;
+.member > h1 {
+  font-family: "Bellefair", serif;
   font-size: 3rem;
   font-weight: 400;
   margin-top: 1rem;
 }
 
-.crew_card_member > p {
+.member > p {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 2rem;
@@ -41,4 +41,61 @@
 
 .crew_card_photo {
   height: 72vh;
+}
+
+/* ----------- MEDIA -------------- */
+
+@media screen and (max-width: 770px) {
+  .crew {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+  .crew_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+  .member > h2 {
+    margin-top: 4rem;
+  }
+  .member > p {
+    height: 8rem;
+    width: 100%;
+    margin: 2rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .crew {
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
+  .crew_card {
+    flex-direction: column-reverse;
+  }
+  .crew_card_member {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .member > h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  .member > h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .member > p {
+    height: 16rem;
+    width: 100%;
+    margin: 2rem 0 2rem;
+  }
+  .crew_card_photo {
+    height: 100%;
+  }
+  .crew_card_photo > img {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin-top: 2rem;
+    object-fit: contain;
+  }
 }

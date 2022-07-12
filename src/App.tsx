@@ -12,10 +12,10 @@ const App: FC = () => {
     <BrowserRouter>
       <Navigation
         mainLinks={[
-          { label: "00 HOME", link: "/" },
-          { label: "01 DESTINATION", link: "/destination" },
-          { label: "02 CREW", link: "/crew" },
-          { label: "03 TECHNOLOGY", link: "/technology" },
+          { label: "HOME", link: "/" },
+          { label: "DESTINATION", link: "/destination" },
+          { label: "CREW", link: "/crew" },
+          { label: "TECHNOLOGY", link: "/technology" },
         ]}
       />
       <div className="App">

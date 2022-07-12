@@ -53,9 +53,9 @@ const Crew: FC = () => {
   const useStyles = createStyles((theme) => ({
     mainLink: {
       backgroundColor: "gray",
-      width: '0.8rem',
-      height: '0.8rem',
-      borderRadius: '50%',
+      width: "0.8rem",
+      height: "0.8rem",
+      borderRadius: "50%",
       transition: "color 500ms ease, color 500ms ease",
     },
 
@@ -84,8 +84,7 @@ const Crew: FC = () => {
         setActive(index);
         setMember(item);
       }}
-    >
-    </Anchor>
+    ></Anchor>
   ));
 
   return (
@@ -97,9 +96,11 @@ const Crew: FC = () => {
           </div>
           <div className="crew_card">
             <div className="crew_card_member">
-              <h2>{currentMember?.position}</h2>
-              <h1>{currentMember?.name}</h1>
-              <p>{currentMember?.description}</p>
+              <div className="member">
+                <h2>{currentMember?.position}</h2>
+                <h1>{currentMember?.name}</h1>
+                <p>{currentMember?.description}</p>
+              </div>
               <Container className="nav_container">
                 <div className="nav_links">
                   <Group spacing={35} position="right" className="nav_group">
@@ -109,7 +110,7 @@ const Crew: FC = () => {
               </Container>
             </div>
             <div className="crew_card_photo">
-              <img src={currentMember?.img} alt="" style={{height: '100%'}}/>
+              <img src={currentMember?.img} alt="" style={{ height: "100%" }} />
             </div>
           </div>
         </div>

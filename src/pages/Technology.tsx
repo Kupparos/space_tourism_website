@@ -40,7 +40,7 @@ const Technology: FC = () => {
     description: string;
   }
 
-  const useStyles = createStyles(() => ({
+  const useStyles = createStyles((theme) => ({
     mainLink: {
       fontSize: "2rem",
       display: "flex",
@@ -55,6 +55,12 @@ const Technology: FC = () => {
       borderRadius: "50%",
       transition: "background-color 400ms ease",
       textDecoration: "none",
+      [theme.fn.smallerThan(500)]: {
+        width: '3.5rem',
+        height: '3.5rem',
+        fontSize: '1.5rem',
+        margin: '1rem 0',
+      },
 
       "&:hover": {
         textDecoration: "none",
@@ -102,19 +108,25 @@ const Technology: FC = () => {
         </div>
       </div>
       <div className="technology_card">
-        <div className="technology_card_nav">
-          <Container className="nav_tech_container">
-            <div className="nav_tech_links">
-              <Group spacing={50} position="center" className="nav_tech_group">
-                {mainItems}
-              </Group>
-            </div>
-          </Container>
-        </div>
-        <div className="technology_card_terminology">
-          <h2>THE TERMINOLOGY...</h2>
-          <h1>{currentTerm?.name}</h1>
-          <p>{currentTerm?.description}</p>
+        <div className="technology_card_info">
+          <div className="technology_card_nav">
+            <Container className="nav_tech_container">
+              <div className="nav_tech_links">
+                <Group
+                  spacing={45}
+                  position="center"
+                  className="nav_tech_group"
+                >
+                  {mainItems}
+                </Group>
+              </div>
+            </Container>
+          </div>
+          <div className="technology_card_terminology">
+            <h2>THE TERMINOLOGY...</h2>
+            <h1>{currentTerm?.name}</h1>
+            <p>{currentTerm?.description}</p>
+          </div>
         </div>
         <div className="technology_card_img">
           <img src={currentTerm?.img} alt="" />
