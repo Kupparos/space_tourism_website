@@ -1,7 +1,15 @@
 import { FC } from "react";
 import "../styles/home.css";
+import { useState } from "react";
+import { Modal } from "@mantine/core";
+import ModalExplore from "../components/ModalExplore";
 
 const Home: FC = () => {
+  const [opened, setOpened] = useState<boolean>(false);
+  const updateVisibility = (open: boolean):void => {
+    setOpened(open)
+}
+
   return (
     <div className="home">
       <div className="container">
@@ -16,7 +24,18 @@ const Home: FC = () => {
               this world experience!
             </p>
           </div>
-          <button className="home_explore" onClick={() => {window.location.href='/'}}>EXPLORE</button>
+          <button className="home_explore" onClick={() => setOpened(true)}>
+            EXPLORE
+          </button>
+          <Modal
+            centered
+            opened={opened}
+            onClose={() => setOpened(false)}
+            size="xl"
+            withCloseButton={false}
+          >
+            <ModalExplore open={opened} updateVisibility={updateVisibility}/>
+          </Modal>
         </div>
       </div>
     </div>
