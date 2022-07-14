@@ -1,6 +1,6 @@
 import "./App.css";
 import { FC } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import Destination from "./pages/Destination";
@@ -9,7 +9,7 @@ import Technology from "./pages/Technology";
 
 const App: FC = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navigation
         mainLinks={[
           { label: "HOME", link: "/" },
@@ -27,7 +27,7 @@ const App: FC = () => {
           <Route path="*" element={<Home />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
